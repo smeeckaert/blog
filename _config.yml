@@ -3,3 +3,10 @@ safe: true
 lsi: false
 relative_permalinks: false
 baseurl: /blog
+
+nav:
+- page: Header One
+  permalink: #header-one
+
+- page: Header Two
+  permalink: #header-two
