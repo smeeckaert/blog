@@ -1,0 +1,10 @@
+{
+    "name"           : "smeeckaertblog",
+    "version"        : "0.1.0",
+    "devDependencies": {
+        "grunt"              : "",
+        "grunt-cli"          : "",
+        "grunt-contrib-watch": "",
+        "grunt-sass"         : ""
+    }
+}
