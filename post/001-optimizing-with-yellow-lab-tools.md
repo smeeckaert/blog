@@ -1,6 +1,10 @@
 # Optimizing a website with Yellow Lab Tools
 
+Posted on: 2015/11/10
+
 _In this post I will discuss how I've drastically improved performances on a website using Yellow Lab Tools_
+
+__TL;DR__ : Optimize your images, check what your JS is doing, clean your CSS
 
 ## What's YLT ?
 
@@ -141,7 +145,8 @@ So lets take a look to the [huge number of universal selector](001_ressources/cs
 chose universal selector because it's a good indicator of bad pratices.
 
 And as you can see in the linked image, most of them seems to come from Foundation. Because, like i thought, the complete
-Foundation package is compiled in the CSS even if the website use the grid and some typo rules.
+Foundation package is compiled in the CSS even if the website only use a small subset of the features like
+the grid and some typo rules.
 
 Even when removing a lot of the files, there are still problems emerging from foundation, as you can see there is a lot
 of duplicated colours :
@@ -166,7 +171,7 @@ Of course, I'm not thrilled by the score given by Yellow Lab Tools, but when we 
 a huge number of [!important](001_ressources/css/006-important.png) and of [redudant selectors](001_ressources/css/005-redundant.png).
 
 The first one come with Foundation, and while I don't condone the pratice, there is little I can do about it except
-dropping Foundation as a whole, what I will not do anytime soom.
+dropping Foundation as a whole, what I will not do anytime soon, but maybe we will need to take a good look at Skeleton.
 
 The other one come from the usage of the selector ```ul li``` as a bad practice according to YLT, it considers that it's
 useless to put ul in the selector since a li will always be contained in an ul. But writing my stylesheets in sass,
@@ -174,7 +179,8 @@ this kind of selector is hard to prevent easily so I've decided to ignore them a
 
 ## Conclusion
 
-So here it is, it took me more time to write this post than to optimize this website and the results are incredible:
+So here it is, it took me more time to write this post than to optimize this website and the results are incredible for
+the little amount of time I spent doing it.
 
 ### Results
 
@@ -197,6 +203,9 @@ Here's the load before the optimizations (throttled at 2MBps)
 
 ![Here we go !](001_ressources/006-speed-after.png)
 
+And in production, with all scripts minified
+
+![Now we're getting something nice !](001_ressources/007-speed-prod.png)
 
 ### Yellow Lab Tools
 
