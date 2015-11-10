@@ -38,7 +38,7 @@ this one was good enough, I would test others as well.
 
 Short answer : __bad__, really bad...
 
-![This is bad, and I definitely feel bad](001_ressources/001-screen.png)
+<img data-appear-src="001_ressources/001-screen.png" alt="This is bad, and I definitely feel bad">
 
 Seeing this I realized that even with some optimizations that I made
 (pre/post processing of style and js, image caching, ...) the website was style ridiculously heavy and slow.
@@ -87,7 +87,7 @@ of my red dots.
 
 Now we need to look at the total weight, we go in the details and see this.
 
-![Send all the things, now !](001_ressources/weight/001-weight.png)
+<img data-appear-src="001_ressources/weight/001-weight.png" alt="Send all the things, now !">
 
 It was half expected but yeah that's a big lot of requests.
 
@@ -110,7 +110,7 @@ my bundled js and only load some polyfill when really needed.
 Next we see that most images are huge and take more than half of the page size. So I go to the image optimization details
 and see this.
 
-![Now we'll be shipping .tiff](001_ressources/weight/003-image-size.png)
+<img data-appear-src="001_ressources/weight/003-image-size.png" alt="Now we'll be shipping .tiff">
 
 God that's a load of unoptimized image. And there was numerous other examples in the website.
 
@@ -123,16 +123,17 @@ Here you can see the differences between the 100% quality image and the 60% one.
 
 Can you spot a difference ? Me neither, but one is nearly 600kb and the other one is 140kb, that's a huge difference.
 
-![Am i big ?](001_ressources/weight/004-image-full-hd.png)
-![Or am i light ?](001_ressources/weight/005-image-60.png)
+
+<img data-appear-src="001_ressources/weight/004-image-full-hd.png" alt="Am i big ?">
+<img data-appear-src="001_ressources/weight/005-image-60.png" alt="Or am i light ?">
 
 That's a load of file size reduced and now the only biggest files we have are youtube's javascripts.
 
-![Youtube, don't be bloating.](001_ressources/weight/006-weight-after.png)
+<img data-appear-src="001_ressources/weight/006-weight-after.png" alt="Youtube, don't be bloating.">
 
 It gets even better without youtube dropping from __3.59Mb__ to __597kb__. That's a big ass improvement !
 
-![Are we small yet ?](001_ressources/weight/007-weight-after-no-yt.png)
+<img data-appear-src="001_ressources/weight/007-weight-after-no-yt.png" alt="Are we small yet ?">
 
 Now with two little changes we lowered 7 time the page weight making it acceptable on mobile.
 
@@ -155,17 +156,18 @@ the grid and some typo rules.
 Even when removing a lot of the files, there are still problems emerging from foundation, as you can see there is a lot
 of duplicated colours :
 
-![Foundation, taste the rainbow](001_ressources/css/002-colour-count.png)
+<img data-appear-src="001_ressources/css/002-colour-count.png" alt="Foundation, taste the rainbow">
 
 It gets better when I just simply removed all foundations colours.
 
-![Can you guess the main color of the website ?](001_ressources/css/003-colour-opti.png)
+<img data-appear-src="001_ressources/css/003-colour-opti.png" alt="Can you guess the main color of the website ?">
 
 It may seems like a micro optimization, but it's the kind of change that prevent colours from foundation to just
 pop from nowhere from a selector you just forgot to override.
 
-![You have work to do foundation...](001_ressources/css/004-cleanfoundation.png)
+<img data-appear-src="001_ressources/css/004-cleanfoundation.png" alt="You have work to do foundation...">
 
+You have work to do foundation...
 So with theses little modifications I went from D to C in YLT, but more importantly I got rid of more than 1500 CSS
 rules and a shitload of old prefixes by just doing it making the CSS more maintainable overall.
 
@@ -190,11 +192,11 @@ the little amount of time I spent doing it.
 
 Here are the results in the development environment.
 
-![The grass is always greener](001_ressources/003-result-dev.png)
+<img data-appear-src="001_ressources/003-result-dev.png" alt="The grass is always greener">
 
 And on the pre-production server.
 
-![When you take time to water it !](001_ressources/004-result-prod.png)
+<img data-appear-src="001_ressources/004-result-prod.png" alt="When you take time to water it !">
 
 ### Load time
 
@@ -202,14 +204,15 @@ The load time has been drastically reduced too.
 
 Here's the load before the optimizations (throttled at 2MBps)
 
-![Keep calm and...](001_ressources/005-speed-before.png)
+<img data-appear-src="001_ressources/005-speed-before.png" alt="Keep calm and...">
 
+And after !
 
-![Here we go !](001_ressources/006-speed-after.png)
+<img data-appear-src="001_ressources/006-speed-after.png" alt="Here we go !">
 
 And in production, with all scripts minified
 
-![Now we're getting something nice !](001_ressources/007-speed-prod.png)
+<img data-appear-src="001_ressources/007-speed-prod.png" alt="Now we're getting something nice !">
 
 ### Yellow Lab Tools
 
