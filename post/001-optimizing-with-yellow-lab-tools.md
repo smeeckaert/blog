@@ -1,3 +1,7 @@
+---
+layout: default
+title: Optimizing a website with Yellow Lab Tools
+---
 # Optimizing a website with Yellow Lab Tools
 
 Posted on: 2015/11/10
